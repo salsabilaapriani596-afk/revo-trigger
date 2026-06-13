@@ -29,3 +29,7 @@ function previewFile(input){
 function deleteFile(name){
     console.log("Delete file:", name);
 }
+
+function beforePreview(){
+    console.log("Before preview");
+}
