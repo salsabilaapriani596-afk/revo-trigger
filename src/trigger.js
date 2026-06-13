@@ -33,3 +33,7 @@ function deleteFile(name){
 function beforeDelete(name){
     console.log("Before delete:", name);
 }
+
+function afterPreview(){
+    console.log("After preview");
+}
