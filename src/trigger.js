@@ -12,6 +12,8 @@ function previewFile(input){
 
     if(!file) return;
 
+    beforePreview();
+
     beforeUpload(file);
 
     let ext = file.name.split('.').pop().toLowerCase();
@@ -23,15 +25,29 @@ function previewFile(input){
 
     afterUpload(file);
 
+    afterPreview();
+
     console.log("File siap upload");
 }
 
 function deleteFile(name){
+    beforeDelete(name);
+
     console.log("Delete file:", name);
+
+    afterDelete(name);
 }
 
 function beforeDelete(name){
     console.log("Before delete:", name);
+}
+
+function afterDelete(name){
+    console.log("After delete:", name);
+}
+
+function beforePreview(){
+    console.log("Before preview");
 }
 
 function afterPreview(){
